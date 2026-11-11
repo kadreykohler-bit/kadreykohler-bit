@@ -65,21 +65,98 @@ def listar_repos():
 
 def bloco_linguagens(repos):
     total = Counter()
+
     for r in repos:
         try:
             total.update(req(r["languages_url"]))
-        except Exception as e:  # um repo com erro não derruba o resto
-            print(f"aviso: linguagens de {r['name']}: {e}", file=sys.stderr)
-    soma = sum(total.values()) or 1
-    linhas = []
-    for nome, qtd in total.most_common(6):
-        pct = qtd * 100 / soma
-        cheio = round(pct / 5)
-        linhas.append(f"{nome:<12} {'█' * cheio}{'░' * (20 - cheio)} {pct:5.1f}%")
-    if not linhas:
-        return "_Sem dados de linguagens ainda._"
-    return "```text\n" + "\n".join(linhas) + "\n```"
+        except Exception as e:
+            print(
+                f"aviso: linguagens de {r['name']}: {e}",
+                file=sys.stderr
+            )
 
+    if not total:
+        return "_Sem dados de linguagens ainda._"
+
+    soma = sum(total.values())
+    ranking = total.most_common(6)
+
+    cores = {
+        "JavaScript": "#F1E05A",
+        "TypeScript": "#3178C6",
+        "Python": "#3572A5",
+        "HTML": "#E34C26",
+        "CSS": "#563D7C",
+        "Java": "#B07219",
+        "C": "#555555",
+        "C++": "#F34B7D",
+        "C#": "#178600",
+        "PHP": "#4F5D95",
+        "Go": "#00ADD8",
+        "Shell": "#89E051",
+        "Ruby": "#701516",
+        "Dart": "#00B4AB",
+        "Kotlin": "#A97BFF",
+        "SQL": "#E38C00",
+    }
+
+    altura = 105 + len(ranking) * 43
+    elementos = []
+
+    for i, (nome, qtd) in enumerate(ranking):
+        pct = qtd * 100 / soma
+        largura = pct * 4.2
+        y = 100 + i * 43
+        cor = cores.get(nome, "#8B949E")
+
+        nome_svg = (
+            nome.replace("&", "&amp;")
+            .replace("<", "&lt;")
+            .replace(">", "&gt;")
+        )
+
+        elementos.append(f"""
+        <text x="28" y="{y}" fill="#E6EDF3"
+              font-size="14" font-weight="600">{nome_svg}</text>
+
+        <rect x="165" y="{y - 13}" width="420" height="9"
+              rx="5" fill="#30363D"/>
+
+        <rect x="165" y="{y - 13}" width="{largura:.1f}" height="9"
+              rx="5" fill="{cor}"/>
+
+        <text x="690" y="{y}" fill="#E6EDF3"
+              font-size="13" text-anchor="end">{pct:.1f}%</text>
+        """)
+
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
+        width="720" height="{altura}" viewBox="0 0 720 {altura}">
+        <rect width="720" height="{altura}" rx="12" fill="#0D1117"/>
+
+        <text x="28" y="35" fill="#E6EDF3"
+              font-size="18" font-weight="bold">
+            Linguagens mais utilizadas
+        </text>
+
+        <text x="28" y="62" fill="#8B949E" font-size="12">
+            Distribuição baseada nos repositórios públicos
+        </text>
+
+        {''.join(elementos)}
+    </svg>
+    """
+
+    os.makedirs("assets", exist_ok=True)
+
+    with open("assets/languages.svg", "w", encoding="utf-8") as arquivo:
+        arquivo.write(svg)
+
+    return (
+        '<p align="center">'
+        '<img src="assets/languages.svg" '
+        'alt="Distribuição das linguagens de programação" width="720">'
+        '</p>'
+    )
 
 def pastas_de_projeto(repo):
     """Pastas mais rasas que têm um README.md (ignora subpastas de uma pasta já listada)."""
