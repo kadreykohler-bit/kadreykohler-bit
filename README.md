@@ -50,14 +50,7 @@ Em busca de oportunidade como **Desenvolvedor Full Stack, Back-end ou na área d
 Calculado automaticamente a partir dos meus repositórios públicos.
 
 <!--LANGUAGES:START-->
-```text
-JavaScript   ████████████░░░░░░░░  60.1%
-Python       ███░░░░░░░░░░░░░░░░░  15.0%
-HTML         ███░░░░░░░░░░░░░░░░░  14.7%
-CSS          █░░░░░░░░░░░░░░░░░░░   6.0%
-TypeScript   █░░░░░░░░░░░░░░░░░░░   3.9%
-Dockerfile   ░░░░░░░░░░░░░░░░░░░░   0.2%
-```
+<p align="center"><img src="assets/languages.svg" alt="Distribuição das linguagens de programação" width="720"></p>
 <!--LANGUAGES:END-->
 
 ## Projetos
