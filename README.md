@@ -47,7 +47,7 @@ Em busca de oportunidade como **Desenvolvedor Full Stack, Back-end ou na área d
 
 ## Linguagens mais usadas
 
-Calculado automaticamente a partir dos meus repositórios públicos.
+Conheça as principais tecnologias presentes nos meus projetos.
 
 <!--LANGUAGES:START-->
 <p align="center"><img src="assets/languages.svg" alt="Distribuição das linguagens de programação" width="720"></p>
@@ -55,7 +55,6 @@ Calculado automaticamente a partir dos meus repositórios públicos.
 
 ## Projetos
 
-Lista gerada automaticamente: cada pasta com um `README.md` dentro dos meus repositórios aparece aqui.
 
 <!--PROJECTS:START-->
 | Repositório | Descrição | Linguagens e tecnologias | Atualizado |
