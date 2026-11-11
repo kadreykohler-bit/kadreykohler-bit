@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+        width="720" height="363" viewBox="0 0 720 363">
+        <rect width="720" height="363" rx="12" fill="#0D1117"/>
+
+        <text x="28" y="35" fill="#E6EDF3"
+              font-size="18" font-weight="bold">
+            Linguagens mais utilizadas
+        </text>
+
+        <text x="28" y="62" fill="#8B949E" font-size="12">
+            Distribuição baseada nos repositórios públicos
+        </text>
+
+        
+        <text x="28" y="100" fill="#E6EDF3"
+              font-size="14" font-weight="600">JavaScript</text>
+
+        <rect x="165" y="87" width="420" height="9"
+              rx="5" fill="#30363D"/>
+
+        <rect x="165" y="87" width="252.3" height="9"
+              rx="5" fill="#F1E05A"/>
+
+        <text x="690" y="100" fill="#E6EDF3"
+              font-size="13" text-anchor="end">60.1%</text>
+        
+        <text x="28" y="143" fill="#E6EDF3"
+              font-size="14" font-weight="600">Python</text>
+
+        <rect x="165" y="130" width="420" height="9"
+              rx="5" fill="#30363D"/>
+
+        <rect x="165" y="130" width="62.9" height="9"
+              rx="5" fill="#3572A5"/>
+
+        <text x="690" y="143" fill="#E6EDF3"
+              font-size="13" text-anchor="end">15.0%</text>
+        
+        <text x="28" y="186" fill="#E6EDF3"
+              font-size="14" font-weight="600">HTML</text>
+
+        <rect x="165" y="173" width="420" height="9"
+              rx="5" fill="#30363D"/>
+
+        <rect x="165" y="173" width="61.7" height="9"
+              rx="5" fill="#E34C26"/>
+
+        <text x="690" y="186" fill="#E6EDF3"
+              font-size="13" text-anchor="end">14.7%</text>
+        
+        <text x="28" y="229" fill="#E6EDF3"
+              font-size="14" font-weight="600">CSS</text>
+
+        <rect x="165" y="216" width="420" height="9"
+              rx="5" fill="#30363D"/>
+
+        <rect x="165" y="216" width="25.3" height="9"
+              rx="5" fill="#563D7C"/>
+
+        <text x="690" y="229" fill="#E6EDF3"
+              font-size="13" text-anchor="end">6.0%</text>
+        
+        <text x="28" y="272" fill="#E6EDF3"
+              font-size="14" font-weight="600">TypeScript</text>
+
+        <rect x="165" y="259" width="420" height="9"
+              rx="5" fill="#30363D"/>
+
+        <rect x="165" y="259" width="16.3" height="9"
+              rx="5" fill="#3178C6"/>
+
+        <text x="690" y="272" fill="#E6EDF3"
+              font-size="13" text-anchor="end">3.9%</text>
+        
+        <text x="28" y="315" fill="#E6EDF3"
+              font-size="14" font-weight="600">Dockerfile</text>
+
+        <rect x="165" y="302" width="420" height="9"
+              rx="5" fill="#30363D"/>
+
+        <rect x="165" y="302" width="0.7" height="9"
+              rx="5" fill="#8B949E"/>
+
+        <text x="690" y="315" fill="#E6EDF3"
+              font-size="13" text-anchor="end">0.2%</text>
+        
+    </svg>
+    
