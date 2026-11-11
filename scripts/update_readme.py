@@ -201,10 +201,39 @@ def nome_da_pasta(pasta):
 
 
 def bloco_projetos(repos):
-    saida = ["| Repositório | Descrição | Linguagem | Atualizado |", "|---|---|---|---|"]
+    linguagens_exibicao = "JavaScript, Python e outras tecnologias"
+
+    descricoes = {
+        "Labs-Projetos": (
+            "Coleção de projetos práticos envolvendo desenvolvimento "
+            "de software, programação e exploração de diferentes tecnologias."
+        ),
+        "Jornada-Dev": (
+            "Repositório dedicado a desafios e exercícios práticos "
+            "de desenvolvimento, com foco na evolução contínua em programação."
+        ),
+        "Portfolio": (
+            "Projetos pessoais desenvolvidos para demonstrar conhecimentos "
+            "em programação, desenvolvimento de software e Python."
+        )
+    }
+
+    saida = [
+        "| Repositório | Descrição | Linguagens e tecnologias | Atualizado |",
+        "|---|---|---|---|"
+    ]
+
     for r in repos:
         link = f"[**{r['name']}**]({r['html_url']})"
-        saida.append(f"| {link} | {celula(r['description'])} | {celula(r['language'])} | {data_br(r['pushed_at'])} |")
+        descricao = descricoes.get(
+            r["name"],
+            r["description"] or "Projetos e estudos de desenvolvimento."
+        )
+
+        saida.append(
+            f"| {link} | {celula(descricao)} | "
+            f"{linguagens_exibicao} | {data_br(r['pushed_at'])} |"
+        )
 
     for r in repos:
         try:
@@ -212,15 +241,31 @@ def bloco_projetos(repos):
         except Exception as e:
             print(f"aviso: árvore de {r['name']}: {e}", file=sys.stderr)
             continue
+
         if len(pastas) < MIN_PROJETOS_PARA_LISTAR:
             continue
+
         itens = []
+
         for pasta in pastas:
             titulo, desc = titulo_e_descricao(r["name"], branch, pasta)
             titulo = titulo or nome_da_pasta(pasta)
             url = f"{r['html_url']}/tree/{branch}/{urllib.parse.quote(pasta)}"
-            itens.append(f"- [{titulo}]({url})" + (f" — {desc}" if desc else ""))
-        saida += ["", f"<details>", f"<summary><b>{r['name']}</b>: {len(pastas)} projetos</summary>", "", *itens, "", "</details>"]
+
+            itens.append(
+                f"- [{titulo}]({url})" + (f" — {desc}" if desc else "")
+            )
+
+        saida += [
+            "",
+            "<details>",
+            f"<summary><b>{r['name']}</b>: {len(pastas)} projetos</summary>",
+            "",
+            *itens,
+            "",
+            "</details>"
+        ]
+
     return "\n".join(saida)
 
 
