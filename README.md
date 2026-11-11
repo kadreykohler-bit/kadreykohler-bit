@@ -58,11 +58,11 @@ Calculado automaticamente a partir dos meus repositórios públicos.
 Lista gerada automaticamente: cada pasta com um `README.md` dentro dos meus repositórios aparece aqui.
 
 <!--PROJECTS:START-->
-| Repositório | Descrição | Linguagem | Atualizado |
+| Repositório | Descrição | Linguagens e tecnologias | Atualizado |
 |---|---|---|---|
-| [**Labs-Projetos**](https://github.com/kadreykohler-bit/Labs-Projetos) | — | HTML | 10/11/2026 |
-| [**Jornada-Dev**](https://github.com/kadreykohler-bit/Jornada-Dev) | Repositório dedicado a desafios e exercícios práticos de desenvolvimento, voltados à consolidação de conhecimentos e à evolução contínua em tecnologia. | JavaScript | 09/11/2026 |
-| [**Portfolio**](https://github.com/kadreykohler-bit/Portfolio) | — | Python | 14/08/2026 |
+| [**Labs-Projetos**](https://github.com/kadreykohler-bit/Labs-Projetos) | Coleção de projetos práticos envolvendo desenvolvimento de software, programação e exploração de diferentes tecnologias. | JavaScript, Python e outras tecnologias | 10/11/2026 |
+| [**Jornada-Dev**](https://github.com/kadreykohler-bit/Jornada-Dev) | Repositório dedicado a desafios e exercícios práticos de desenvolvimento, com foco na evolução contínua em programação. | JavaScript, Python e outras tecnologias | 09/11/2026 |
+| [**Portfolio**](https://github.com/kadreykohler-bit/Portfolio) | Projetos pessoais desenvolvidos para demonstrar conhecimentos em programação, desenvolvimento de software e Python. | JavaScript, Python e outras tecnologias | 14/08/2026 |
 
 <details>
 <summary><b>Labs-Projetos</b>: 30 projetos</summary>
