@@ -59,6 +59,7 @@ Conheça as principais tecnologias presentes nos meus projetos.
 <!--PROJECTS:START-->
 | Repositório | Descrição | Linguagens e tecnologias | Atualizado |
 |---|---|---|---|
+| [**aprender-comunicar-apae**](https://github.com/kadreykohler-bit/aprender-comunicar-apae) | Projetos e estudos de desenvolvimento. | JavaScript, Python e outras tecnologias | 23/11/2026 |
 | [**Labs-Projetos**](https://github.com/kadreykohler-bit/Labs-Projetos) | Coleção de projetos práticos envolvendo desenvolvimento de software, programação e exploração de diferentes tecnologias. | JavaScript, Python e outras tecnologias | 10/11/2026 |
 | [**Jornada-Dev**](https://github.com/kadreykohler-bit/Jornada-Dev) | Repositório dedicado a desafios e exercícios práticos de desenvolvimento, com foco na evolução contínua em programação. | JavaScript, Python e outras tecnologias | 09/11/2026 |
 | [**Portfolio**](https://github.com/kadreykohler-bit/Portfolio) | Projetos pessoais desenvolvidos para demonstrar conhecimentos em programação, desenvolvimento de software e Python. | JavaScript, Python e outras tecnologias | 14/08/2026 |
